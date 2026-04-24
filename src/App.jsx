@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
@@ -15,6 +15,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import AdminPanel from './pages/AdminPanel.jsx'
+import { AuthService } from './services/AuthService.js'
 
 function App() {
     var savedTheme = localStorage.getItem('theme')
@@ -48,6 +49,42 @@ function App() {
     var hasNewsletterBeenShown = newsletterShownState[0]
     var setHasNewsletterBeenShown = newsletterShownState[1]
 
+    // User auth state
+    var userState = useState(null)
+    var user = userState[0]
+    var setUser = userState[1]
+
+    // Check session on app load
+    useEffect(function() {
+        AuthService.getSession().then(function(sessionUser) {
+            if (sessionUser && sessionUser.email) {
+                setUser(sessionUser)
+                // Load user's cart from DB
+                AuthService.getCart().then(function(items) {
+                    if (items && items.length > 0) {
+                        setCartItems(items)
+                    }
+                })
+            }
+        })
+    }, [])
+
+    // Save cart to DB whenever it changes (only if logged in)
+    var cartSyncTimeout = useState(null)
+    var cartSyncRef = cartSyncTimeout[0]
+    var setCartSyncRef = cartSyncTimeout[1]
+
+    function syncCartToServer(items) {
+        // Debounce cart saves
+        if (cartSyncRef) {
+            clearTimeout(cartSyncRef)
+        }
+        var timeoutId = setTimeout(function() {
+            AuthService.saveCart(items)
+        }, 500)
+        setCartSyncRef(timeoutId)
+    }
+
     function handleThemeToggle() {
         if (isDarkMode === true) {
             setIsDarkMode(false)
@@ -77,10 +114,10 @@ function App() {
             }
         }
 
+        var updatedCart
         if (existingIndex >= 0) {
-            var updatedCart = cartItems.slice()
+            updatedCart = cartItems.slice()
             updatedCart[existingIndex].quantity = updatedCart[existingIndex].quantity + quantity
-            setCartItems(updatedCart)
         } else {
             var newItem = {
                 title: product.title,
@@ -90,9 +127,11 @@ function App() {
                 imageDarkSrc: product.imageDarkSrc,
                 quantity: quantity
             }
-            setCartItems(cartItems.concat([newItem]))
+            updatedCart = cartItems.concat([newItem])
         }
 
+        setCartItems(updatedCart)
+        if (user) syncCartToServer(updatedCart)
         showToast('Added to cart: ' + product.title, 'success')
     }
 
@@ -101,6 +140,7 @@ function App() {
         var removedItem = updatedCart[index]
         updatedCart.splice(index, 1)
         setCartItems(updatedCart)
+        if (user) syncCartToServer(updatedCart)
         showToast('Removed: ' + removedItem.title, 'info')
     }
 
@@ -108,12 +148,15 @@ function App() {
         var updatedCart = cartItems.slice()
         updatedCart[index].quantity = newQuantity
         setCartItems(updatedCart)
+        if (user) syncCartToServer(updatedCart)
     }
 
     function handleCheckout() {
         setIsCartOpen(false)
         showToast('Order placed successfully! 🎉', 'success')
-        setCartItems([])
+        var emptyCart = []
+        setCartItems(emptyCart)
+        if (user) syncCartToServer(emptyCart)
     }
 
     function showToast(message, type) {
@@ -155,6 +198,24 @@ function App() {
         return total
     }
 
+    function handleLogin(userData) {
+        setUser(userData)
+        // Load user's cart from DB
+        AuthService.getCart().then(function(items) {
+            if (items && items.length > 0) {
+                setCartItems(items)
+            }
+        })
+    }
+
+    function handleLogout() {
+        AuthService.logout().then(function() {
+            setUser(null)
+            setCartItems([])
+            showToast('Logged out successfully', 'info')
+        })
+    }
+
     return (
         <BrowserRouter>
             <VideoBackground isDarkMode={isDarkMode} />
@@ -186,6 +247,8 @@ function App() {
                 onThemeToggle={handleThemeToggle}
                 cartItemCount={getTotalCartItems()}
                 onCartClick={handleCartClick}
+                user={user}
+                onLogout={handleLogout}
             />
             <Toast
                 message={toast.message}
@@ -227,6 +290,8 @@ function App() {
                     <LoginPage
                         isDarkMode={isDarkMode}
                         showToast={showToast}
+                        onLogin={handleLogin}
+                        user={user}
                     />
                 } />
                 <Route path="/admin" element={

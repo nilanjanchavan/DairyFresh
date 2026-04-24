@@ -1,42 +1,50 @@
-version: '3.8'
-
 services:
   db:
     image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpass}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpass1234}
       MYSQL_DATABASE: dairyfresh_db
       MYSQL_USER: ${DB_USER:-dairyuser}
       MYSQL_PASSWORD: ${DB_PASSWORD:-dairypass}
     volumes:
       - db_data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "3306:3306"
+      - "3307:3306"
+    command: >
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
 
   backend:
     image: tomcat:10-jdk21
     restart: always
+    network_mode: host
     environment:
-      DB_URL: jdbc:mysql://db:3306/dairyfresh_db
+      DB_URL: jdbc:mysql://localhost:3307/dairyfresh_db?useSSL=false&allowPublicKeyRetrieval=true&connectTimeout=5000&socketTimeout=30000&serverTimezone=UTC
       DB_USER: ${DB_USER:-dairyuser}
       DB_PASSWORD: ${DB_PASSWORD:-dairypass}
-    ports:
-      - "8080:8080"
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@dairyfresh.com}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
     volumes:
       - ./backend/target/backend.war:/usr/local/tomcat/webapps/backend.war
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   nginx:
     image: nginx:latest
     restart: always
-    ports:
-      - "80:80"
+    network_mode: host
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      # Mount the frontend dist directory. Ensure 'npm run build' is run before formatting.
       - ./dist:/usr/share/nginx/html
     depends_on:
       - backend

@@ -1,19 +1,39 @@
 import React from 'react'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import { useState, useRef, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthService } from '../services/AuthService.js'
 
 function Header(props) {
     var isDarkMode = props.isDarkMode
     var onThemeToggle = props.onThemeToggle
     var cartItemCount = props.cartItemCount
     var onCartClick = props.onCartClick
+    var user = props.user
+    var onLogout = props.onLogout
 
     var menuState = useState(false)
     var isMenuOpen = menuState[0]
     var setIsMenuOpen = menuState[1]
 
+    var dropdownState = useState(false)
+    var isDropdownOpen = dropdownState[0]
+    var setIsDropdownOpen = dropdownState[1]
+
+    var dropdownRef = useRef(null)
     var navigate = useNavigate()
+
+    // Close dropdown when clicking outside
+    useEffect(function() {
+        function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsDropdownOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return function() {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [])
 
     function handleMenuToggle() {
         if (isMenuOpen === true) {
@@ -34,8 +54,25 @@ function Header(props) {
         }, 100)
     }
 
+    function handleDropdownToggle() {
+        setIsDropdownOpen(!isDropdownOpen)
+    }
+
+    function handleLogoutClick() {
+        setIsDropdownOpen(false)
+        if (onLogout) onLogout()
+    }
+
+    function handleAdminClick() {
+        setIsDropdownOpen(false)
+        navigate('/admin')
+    }
+
     var logoSrc = isDarkMode ? '/images/logo_dark.png' : '/images/logo.png'
     var navClassName = isMenuOpen ? 'active' : ''
+
+    // Get first letter of name for avatar
+    var userInitial = user && user.name ? user.name.charAt(0).toUpperCase() : '?'
 
     return (
         <header>
@@ -77,7 +114,33 @@ function Header(props) {
                     <Link to="/about">About Us</Link>
                     <Link to="/products">Our Products</Link>
                     <a href="#footer" onClick={handleContactClick}>Contact</a>
-                    <Link to="/login">Login</Link>
+
+                    {user ? (
+                        <div className="user-dropdown" ref={dropdownRef}>
+                            <button className="user-dropdown-btn" onClick={handleDropdownToggle}>
+                                <span className="user-avatar">{userInitial}</span>
+                                <span className="user-name">{user.name}</span>
+                                <span className="dropdown-arrow">{isDropdownOpen ? '▲' : '▼'}</span>
+                            </button>
+                            {isDropdownOpen && (
+                                <div className="user-dropdown-menu">
+                                    <div className="dropdown-user-info">
+                                        <span className="dropdown-email">{user.email}</span>
+                                    </div>
+                                    {user.role === 'admin' && (
+                                        <button className="dropdown-item" onClick={handleAdminClick}>
+                                            ⚙️ Admin Panel
+                                        </button>
+                                    )}
+                                    <button className="dropdown-item dropdown-logout" onClick={handleLogoutClick}>
+                                        🚪 Logout
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <Link to="/login">Login</Link>
+                    )}
                 </nav>
             </div>
         </header>

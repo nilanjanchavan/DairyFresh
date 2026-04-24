@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthService } from '../services/AuthService.js'
 import Popup from '../components/Popup.jsx'
@@ -8,6 +8,15 @@ function LoginPage(props) {
     var navigate = useNavigate();
     var isDarkMode = props.isDarkMode
     var showToast = props.showToast
+    var onLogin = props.onLogin
+    var user = props.user
+
+    // Redirect if already logged in
+    useEffect(function() {
+        if (user) {
+            navigate('/')
+        }
+    }, [user])
 
     var modeState = useState('login')
     var mode = modeState[0]
@@ -59,17 +68,29 @@ function LoginPage(props) {
         if (mode === 'login') {
             try {
                 const response = await AuthService.login(email, password);
+                if (onLogin) onLogin(response);
                 if (response.role === 'admin') {
                     if (showToast) showToast('Admin login successful!', 'success');
                     navigate('/admin');
                 } else {
-                    setShowSuccessPopup(true);
+                    if (showToast) showToast('Login successful! Welcome back, ' + (response.name || 'User') + '!', 'success');
+                    navigate('/');
                 }
             } catch (err) {
-                if (showToast) showToast('Invalid credentials (try admin@dairyfresh.com / admin123)', 'error');
+                let msg = err.message;
+                if (msg === 'Invalid credentials') msg = 'Invalid email or password.';
+                if (showToast) showToast(msg, 'error');
             }
         } else {
-            setShowSuccessPopup(true)
+            try {
+                await AuthService.register(name, email, phone, password);
+                if (showToast) showToast('Account created! Please log in.', 'success');
+                setMode('login');
+                setName('');
+                setPhone('');
+            } catch (err) {
+                if (showToast) showToast(err.message, 'error');
+            }
         }
     }
 

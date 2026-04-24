@@ -44,3 +44,243 @@
 24-Apr-2026 09:21:57.094 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager] has finished in [9] ms
 24-Apr-2026 09:21:57.097 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 24-Apr-2026 09:21:57.104 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [499] milliseconds
+24-Apr-2026 14:46:44.203 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.54
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2026 22:31:53 UTC
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.54.0
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.18.21-1-lts
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.10+7
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 14:46:44.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 14:46:44.214 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/tarun/DairyFresh/apache-tomcat-10.1.54/conf/logging.properties
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 14:46:44.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/tarun/DairyFresh/apache-tomcat-10.1.54/temp
+24-Apr-2026 14:46:44.216 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+24-Apr-2026 14:46:44.355 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 14:46:44.368 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [279] milliseconds
+24-Apr-2026 14:46:44.391 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+24-Apr-2026 14:46:44.391 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.54]
+24-Apr-2026 14:46:44.404 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war]
+24-Apr-2026 14:46:44.414 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend] was found with a last modified time that did not match the associated WAR. It will be deleted.
+24-Apr-2026 14:46:44.720 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Apr-2026 14:46:44.743 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war] has finished in [339] ms
+24-Apr-2026 14:46:44.744 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/examples]
+24-Apr-2026 14:46:44.838 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/examples] has finished in [94] ms
+24-Apr-2026 14:46:44.838 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/host-manager]
+24-Apr-2026 14:46:44.853 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/host-manager] has finished in [14] ms
+24-Apr-2026 14:46:44.853 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/ROOT]
+24-Apr-2026 14:46:44.862 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/ROOT] has finished in [9] ms
+24-Apr-2026 14:46:44.862 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/docs]
+24-Apr-2026 14:46:44.871 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/docs] has finished in [9] ms
+24-Apr-2026 14:46:44.871 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager]
+24-Apr-2026 14:46:44.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager] has finished in [10] ms
+24-Apr-2026 14:46:44.883 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 14:46:44.889 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [520] milliseconds
+24-Apr-2026 14:52:01.841 INFO [http-nio-8080-exec-1] org.apache.tomcat.util.http.parser.Cookie.logInvalidHeader A cookie header was received [g_state={"i_l":0,"i_ll":1776755997390,"i_e":{"enable_itp_optimization":0},"i_b":"zfGjp6XVz7szxBtds1OFvZEn2QriVNBElxWToiQZciA","i_et":1776755997390}] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+24-Apr-2026 15:03:43.589 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.54
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2026 22:31:53 UTC
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.54.0
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.18.21-1-lts
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.10+7
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:03:43.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:03:43.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/tarun/DairyFresh/apache-tomcat-10.1.54/conf/logging.properties
+24-Apr-2026 15:03:43.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Apr-2026 15:03:43.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Apr-2026 15:03:43.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:03:43.598 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/tarun/DairyFresh/apache-tomcat-10.1.54/temp
+24-Apr-2026 15:03:43.599 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+24-Apr-2026 15:03:43.744 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:03:43.750 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1084)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:520)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:955)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:732)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:299)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:577)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:264)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1432)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1445)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:633)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1082)
+		... 11 more
+24-Apr-2026 15:03:43.751 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [251] milliseconds
+24-Apr-2026 15:03:43.771 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+24-Apr-2026 15:03:43.771 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.54]
+24-Apr-2026 15:03:43.783 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war]
+24-Apr-2026 15:03:44.085 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Apr-2026 15:03:44.106 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war] has finished in [324] ms
+24-Apr-2026 15:03:44.106 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/examples]
+24-Apr-2026 15:03:44.193 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/examples] has finished in [87] ms
+24-Apr-2026 15:03:44.193 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/host-manager]
+24-Apr-2026 15:03:44.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/host-manager] has finished in [13] ms
+24-Apr-2026 15:03:44.206 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/ROOT]
+24-Apr-2026 15:03:44.215 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/ROOT] has finished in [9] ms
+24-Apr-2026 15:03:44.216 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/docs]
+24-Apr-2026 15:03:44.224 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/docs] has finished in [8] ms
+24-Apr-2026 15:03:44.225 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager]
+24-Apr-2026 15:03:44.234 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager] has finished in [9] ms
+24-Apr-2026 15:03:44.236 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [483] milliseconds
+24-Apr-2026 15:03:44.238 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:577)
+		at java.base/sun.nio.ch.Net.bind(Net.java:566)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:531)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:848)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:796)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:342)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+24-Apr-2026 15:03:44.238 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:03:44.238 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+24-Apr-2026 15:03:44.253 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:03:44.255 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:27:05.213 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/backend]
+24-Apr-2026 15:27:05.231 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war]
+24-Apr-2026 15:27:05.404 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Apr-2026 15:27:05.405 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war] has finished in [174] ms
+24-Apr-2026 15:27:12.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.54
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 30 2026 22:31:53 UTC
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.54.0
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.18.21-1-lts
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+24-Apr-2026 15:27:12.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.10+7
+24-Apr-2026 15:27:12.320 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+24-Apr-2026 15:27:12.320 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:27:12.320 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/tarun/DairyFresh/apache-tomcat-10.1.54/conf/logging.properties
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/tarun/DairyFresh/apache-tomcat-10.1.54
+24-Apr-2026 15:27:12.325 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/tarun/DairyFresh/apache-tomcat-10.1.54/temp
+24-Apr-2026 15:27:12.326 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+24-Apr-2026 15:27:12.466 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:27:12.473 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1084)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:520)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:955)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:732)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:299)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:577)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:264)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1432)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1445)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:633)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1082)
+		... 11 more
+24-Apr-2026 15:27:12.474 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [245] milliseconds
+24-Apr-2026 15:27:12.493 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+24-Apr-2026 15:27:12.493 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.54]
+24-Apr-2026 15:27:12.505 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war]
+24-Apr-2026 15:27:12.798 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Apr-2026 15:27:12.817 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/backend.war] has finished in [312] ms
+24-Apr-2026 15:27:12.818 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/examples]
+24-Apr-2026 15:27:12.907 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/examples] has finished in [89] ms
+24-Apr-2026 15:27:12.907 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/host-manager]
+24-Apr-2026 15:27:12.921 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/host-manager] has finished in [14] ms
+24-Apr-2026 15:27:12.921 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/ROOT]
+24-Apr-2026 15:27:12.930 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/ROOT] has finished in [9] ms
+24-Apr-2026 15:27:12.930 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/docs]
+24-Apr-2026 15:27:12.939 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/docs] has finished in [9] ms
+24-Apr-2026 15:27:12.940 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager]
+24-Apr-2026 15:27:12.950 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/tarun/DairyFresh/apache-tomcat-10.1.54/webapps/manager] has finished in [10] ms
+24-Apr-2026 15:27:12.953 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [478] milliseconds
+24-Apr-2026 15:27:12.955 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:577)
+		at java.base/sun.nio.ch.Net.bind(Net.java:566)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:531)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:848)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:796)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:342)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+24-Apr-2026 15:27:12.955 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:27:12.955 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+24-Apr-2026 15:27:12.968 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:27:12.968 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:38:55.677 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+24-Apr-2026 15:38:55.677 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:38:55.679 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+24-Apr-2026 15:38:55.687 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+24-Apr-2026 15:38:55.689 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
