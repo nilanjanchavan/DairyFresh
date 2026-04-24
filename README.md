@@ -8,9 +8,10 @@ A responsive React frontend showcasing a variety of premium dairy products. This
 * **Interactive UI:** Smooth state transitions, hover effects, and fast client-side routing.
 
 ## 🛠️ Tech Stack
-* **React** (Frontend Framework)
-* **CSS / Tailwind CSS** (Styling)
-* **Node.js & npm** (Package Management)
+* **Frontend:** React, CSS / Tailwind CSS, Vite
+* **Backend:** Java 21, Tomcat 10, Jakarta Servlets
+* **Database:** MySQL
+* **Deployment:** Nginx, Docker
 
 ## 🚀 Getting Started
 Live instance at [Netlify](https://dairy-fresh.netlify.app/).<br>
@@ -18,33 +19,44 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/DistantMyth/DairyFresh.git](https://github.com/DistantMyth/DairyFresh.git)
-
-```
+   git clone https://github.com/DistantMyth/DairyFresh.git
+   ```
 
 2. **Navigate to the project directory:**
-```bash
-cd DairyFresh
+   ```bash
+   cd DairyFresh
+   ```
 
-```
+3. **Frontend Setup (Vite / React):**
+   ```bash
+   npm install
+   npm run dev 
+   ```
+   Open `http://localhost:5173` to view the frontend.
 
+4. **Backend Setup (Java + Maven):**
+   Ensure you have Java 21 and Maven installed.
+   ```bash
+   cd backend
+   mvn clean package
+   ```
+   Deploy the generated `target/backend.war` to a local Tomcat 10 server.
 
-3. **Install dependencies:**
-```bash
-npm install
+## ☁️ AWS & Docker Deployment
+The project is fully ready for deployment on AWS EC2 (or any VPS).
+We use `docker-compose` to spin up Nginx, Tomcat, and MySQL together.
 
-```
-
-
-4. **Start the development server:**
-```bash
-npm run dev 
-# Note: Use 'npm start' if this project was created with Create React App
-
-```
-
-
-Open `http://localhost:5173` (or the port specified in your terminal) to view it in the browser.
+1. Build the frontend and backend:
+   ```bash
+   npm run build
+   cd backend && mvn clean package && cd ..
+   ```
+2. Copy `.env.example` to `.env` and set your credentials.
+3. Start the services:
+   ```bash
+   docker-compose up -d
+   ```
+The app will be accessible on port 80.
 
 ## 🤝 Contributors
 

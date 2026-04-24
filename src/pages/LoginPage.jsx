@@ -181,7 +181,7 @@ function LoginPage(props) {
                                 style={{
                                     background: 'none',
                                     border: 'none',
-                                    color: '#4a90e2',
+                                    color: '#2ecc71',
                                     cursor: 'pointer',
                                     fontSize: '14px'
                                 }}
@@ -195,7 +195,7 @@ function LoginPage(props) {
                         {buttonText}
                     </button>
 
-                    <p style={{ textAlign: 'center', marginTop: '20px', color: '#4a90e2' }}>
+                    <p style={{ textAlign: 'center', marginTop: '20px', color: '#2ecc71' }}>
                         {toggleText}
                         <button
                             type="button"
@@ -203,7 +203,7 @@ function LoginPage(props) {
                             style={{
                                 background: 'none',
                                 border: 'none',
-                                color: '#1e5a9e',
+                                color: '#228b22',
                                 cursor: 'pointer',
                                 fontWeight: 'bold'
                             }}
@@ -226,7 +226,7 @@ function LoginPage(props) {
                 <div style={{ textAlign: 'center', padding: '20px 0' }}>
                     <div style={{ fontSize: '60px', marginBottom: '15px' }}>✓</div>
                     <h3 style={{ color: '#27ae60', marginBottom: '10px' }}>{successMessage}</h3>
-                    <p style={{ color: '#4a90e2', marginBottom: '20px' }}>
+                    <p style={{ color: '#2ecc71', marginBottom: '20px' }}>
                         {mode === 'login'
                             ? 'Welcome back to DairyFresh!'
                             : 'Welcome to the DairyFresh family!'}
@@ -239,7 +239,7 @@ function LoginPage(props) {
 
             <Popup isOpen={showForgotPassword} onClose={handleForgotPasswordClose} title="🔐 Reset Password">
                 <form onSubmit={handleForgotPasswordSubmit}>
-                    <p style={{ color: '#4a90e2', marginBottom: '20px' }}>
+                    <p style={{ color: '#2ecc71', marginBottom: '20px' }}>
                         Enter your email address and we'll send you a link to reset your password.
                     </p>
                     <div className="form-group">

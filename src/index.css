@@ -1,4 +1,4 @@
-/* ==================== STYLE.CSS - DAIRY FRESH (BLUE & WHITE) ==================== */
+/* ==================== STYLE.CSS - DAIRY FRESH (GREEN & WHITE) ==================== */
 
 * {
     margin: 0;
@@ -13,8 +13,8 @@ html {
 body {
     padding-top: 100px;
     font-family: Arial, sans-serif;
-    background-color: #e8f4f8;
-    color: #1e3a5f;
+    background-color: #e8f8eb;
+    color: #1e4f2b;
     position: relative;
     overflow-x: hidden;
     width: 100%;
@@ -45,7 +45,7 @@ html.dark-mode body .video-background {
 
 /* Header */
 header {
-    background-color: rgba(74, 144, 226, 0.85);
+    background-color: rgba(46, 204, 113, 0.85);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,7 @@ header {
     width: 100vw;
     z-index: 10;
     top: 0;
-    box-shadow: 0 4px 15px rgba(30, 90, 158, 0.2);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
     transition: background-color 0.5s ease;
     height: fit-content;
 }
@@ -169,7 +169,7 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: rgba(30, 90, 158, 0.8);
+    background-color: rgba(39, 174, 96, 0.8);
     border-radius: 15px;
     transition: all 0.3s;
     backdrop-filter: blur(10px);
@@ -177,7 +177,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(22, 66, 117, 0.9);
+    background-color: rgba(30, 130, 76, 0.9);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -194,7 +194,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -208,7 +208,7 @@ html.dark-mode body .quote-section {
     font-style: italic;
     margin-bottom: 10px;
     animation: fadeIn 1s ease-in-out;
-    color: #1e5a9e;
+    color: #228b22;
     transition: color 0.5s ease;
 }
 
@@ -217,7 +217,7 @@ html.dark-mode body .quote-text {
 }
 
 .quote-author {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 16px;
     animation: fadeIn 1s ease-in-out 0.3s both;
     transition: color 0.5s ease;
@@ -256,7 +256,7 @@ html.dark-mode body .quote-author {
     border-radius: 20px;
     margin: 20px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -267,7 +267,7 @@ html.dark-mode body .sidebar {
 
 .sidebar h3 {
     margin-bottom: 20px;
-    color: #1e5a9e;
+    color: #228b22;
     font-size: 20px;
     transition: color 0.5s ease;
 }
@@ -277,14 +277,14 @@ html.dark-mode body .sidebar h3 {
 }
 
 .sidebar-item {
-    background-color: rgba(74, 144, 226, 0.15);
+    background-color: rgba(46, 204, 113, 0.15);
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s;
     backdrop-filter: blur(10px);
-    color: #1e5a9e;
+    color: #228b22;
     font-weight: 500;
 }
 
@@ -294,9 +294,9 @@ html.dark-mode body .sidebar-item {
 }
 
 .sidebar-item:hover {
-    background-color: rgba(74, 144, 226, 0.3);
+    background-color: rgba(46, 204, 113, 0.3);
     transform: translateX(5px);
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
 }
 
 html.dark-mode body .sidebar-item:hover {
@@ -318,7 +318,7 @@ html.dark-mode body .sidebar-item:hover {
     border-radius: 20px;
     margin-bottom: 20px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -328,7 +328,7 @@ html.dark-mode body .content-header {
 }
 
 .content-header h1 {
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 10px;
     word-wrap: break-word;
     transition: color 0.5s ease;
@@ -339,7 +339,7 @@ html.dark-mode body .content-header h1 {
 }
 
 .content-header p {
-    color: #4a90e2;
+    color: #2ecc71;
     word-wrap: break-word;
     transition: color 0.5s ease;
 }
@@ -363,7 +363,7 @@ html.dark-mode body .content-header p {
     border-radius: 20px;
     backdrop-filter: blur(15px);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.15);
     max-width: 100%;
 }
 
@@ -374,7 +374,7 @@ html.dark-mode body .card {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
 }
 
 html.dark-mode body .card:hover {
@@ -382,7 +382,7 @@ html.dark-mode body .card:hover {
 }
 
 .card h3 {
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 10px;
     font-size: 20px;
     word-wrap: break-word;
@@ -394,13 +394,13 @@ html.dark-mode body .card h3 {
 }
 
 .card-content {
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     padding: 15px;
     border-radius: 12px;
     margin-top: 10px;
     min-height: 100px;
     backdrop-filter: blur(10px);
-    color: #1e3a5f;
+    color: #1e4f2b;
     word-wrap: break-word;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -415,7 +415,7 @@ html.dark-mode body .card-content {
 }
 
 .card-content strong {
-    color: #1e5a9e;
+    color: #228b22;
     font-size: 18px;
     transition: color 0.5s ease;
 }
@@ -426,7 +426,7 @@ html.dark-mode body .card-content strong {
 
 /* Button Styles */
 .btn {
-    background-color: rgba(74, 144, 226, 0.9);
+    background-color: rgba(46, 204, 113, 0.9);
     color: #ffffff;
     padding: 12px 25px;
     border: none;
@@ -435,17 +435,17 @@ html.dark-mode body .card-content strong {
     transition: all 0.3s;
     backdrop-filter: blur(10px);
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
 }
 
 .btn:hover {
-    background-color: rgba(30, 90, 158, 0.95);
+    background-color: rgba(39, 174, 96, 0.95);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.4);
+    box-shadow: 0 6px 18px rgba(46, 204, 113, 0.4);
 }
 
 .btn-small {
-    background-color: rgba(74, 144, 226, 0.9);
+    background-color: rgba(46, 204, 113, 0.9);
     color: #ffffff;
     padding: 8px 16px;
     border: none;
@@ -458,7 +458,7 @@ html.dark-mode body .card-content strong {
 }
 
 .btn-small:hover {
-    background-color: rgba(30, 90, 158, 0.95);
+    background-color: rgba(39, 174, 96, 0.95);
     transform: translateY(-2px);
 }
 
@@ -466,7 +466,7 @@ html.dark-mode body .card-content strong {
 .image-placeholder {
     width: 100%;
     height: 200px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -482,7 +482,7 @@ html.dark-mode body .card-content strong {
     min-height: 300px;
     max-height: 450px;
     aspect-ratio: 16 / 9;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -490,7 +490,7 @@ html.dark-mode body .card-content strong {
     margin: 20px 0;
     backdrop-filter: blur(10px);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 .video-placeholder video {
@@ -507,7 +507,7 @@ html.dark-mode body .card-content strong {
     margin: 20px 0;
     backdrop-filter: blur(15px);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
     max-width: 100%;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
@@ -518,7 +518,7 @@ html.dark-mode body .collage-container {
 }
 
 .collage-container h3 {
-    color: #1e5a9e;
+    color: #228b22;
     transition: color 0.5s ease;
 }
 
@@ -535,14 +535,14 @@ html.dark-mode body .collage-container h3 {
 .collage-item {
     min-width: 250px;
     height: 200px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.15);
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.15);
     flex-shrink: 0;
 }
 
@@ -563,7 +563,7 @@ html.dark-mode body .collage-container h3 {
     left: 30px;
     width: 70px;
     height: 70px;
-    /* background-color: rgba(74, 144, 226, 0.95); */
+    /* background-color: rgba(46, 204, 113, 0.95); */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -572,15 +572,15 @@ html.dark-mode body .collage-container h3 {
     transition: all 0.3s;
     backdrop-filter: blur(15px);
     z-index: 1000;
-    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
     overflow: hidden;
     padding: 0;
 }
 
 .chatbot-button:hover {
     transform: scale(1.1);
-    background-color: rgba(30, 90, 158, 0.95);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
+    background-color: rgba(39, 174, 96, 0.95);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.5);
 }
 
 .chatbot-gif {
@@ -597,7 +597,7 @@ html.dark-mode body .collage-container h3 {
     border-radius: 20px;
     margin-bottom: 20px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
     max-width: 100%;
     overflow-x: hidden;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
@@ -610,7 +610,7 @@ html.dark-mode body .about-section {
 
 .about-section h1,
 .about-section h2 {
-    color: #1e5a9e;
+    color: #228b22;
     word-wrap: break-word;
     transition: color 0.5s ease;
 }
@@ -621,7 +621,7 @@ html.dark-mode body .about-section h2 {
 }
 
 .about-section p {
-    color: #1e3a5f;
+    color: #1e4f2b;
     line-height: 1.6;
     margin: 15px 0;
     word-wrap: break-word;
@@ -635,7 +635,7 @@ html.dark-mode body .about-section p {
 .about-image {
     width: 100%;
     height: 300px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 20px;
     margin: 20px 0;
     display: flex;
@@ -643,7 +643,7 @@ html.dark-mode body .about-section p {
     justify-content: center;
     backdrop-filter: blur(10px);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.15);
 }
 
 .feature-grid {
@@ -655,13 +655,13 @@ html.dark-mode body .about-section p {
 }
 
 .feature-card {
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
     backdrop-filter: blur(10px);
     transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.1);
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.1);
 }
 
 html.dark-mode body .feature-card {
@@ -670,9 +670,9 @@ html.dark-mode body .feature-card {
 }
 
 .feature-card:hover {
-    background-color: rgba(74, 144, 226, 0.2);
+    background-color: rgba(46, 204, 113, 0.2);
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .feature-card:hover {
@@ -681,7 +681,7 @@ html.dark-mode body .feature-card:hover {
 }
 
 .feature-card h3 {
-    color: #1e5a9e;
+    color: #228b22;
     word-wrap: break-word;
     transition: color 0.5s ease;
 }
@@ -691,7 +691,7 @@ html.dark-mode body .feature-card h3 {
 }
 
 .feature-card p {
-    color: #4a90e2;
+    color: #2ecc71;
     word-wrap: break-word;
     transition: color 0.5s ease;
 }
@@ -708,7 +708,7 @@ html.dark-mode body .feature-card p {
     max-width: 600px;
     margin: 0 auto;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 .form-group {
@@ -718,7 +718,7 @@ html.dark-mode body .feature-card p {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #1e5a9e;
+    color: #228b22;
     font-weight: 600;
 }
 
@@ -726,10 +726,10 @@ html.dark-mode body .feature-card p {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    background-color: rgba(74, 144, 226, 0.08);
-    border: 2px solid rgba(74, 144, 226, 0.2);
+    background-color: rgba(46, 204, 113, 0.08);
+    border: 2px solid rgba(46, 204, 113, 0.2);
     border-radius: 12px;
-    color: #1e3a5f;
+    color: #1e4f2b;
     backdrop-filter: blur(10px);
     transition: all 0.3s;
 }
@@ -737,7 +737,7 @@ html.dark-mode body .feature-card p {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #4a90e2;
+    border-color: #2ecc71;
     background-color: rgba(255, 255, 255, 0.95);
 }
 
@@ -757,7 +757,7 @@ html.dark-mode body .feature-card p {
     width: 100%;
     max-width: 400px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -767,7 +767,7 @@ html.dark-mode body .login-box {
 }
 
 .login-box h2 {
-    color: #1e5a9e;
+    color: #228b22;
     transition: color 0.5s ease;
 }
 
@@ -778,7 +778,7 @@ html.dark-mode body .login-box h2 {
 .login-logo {
     width: 100%;
     height: 100px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 15px;
     margin-bottom: 30px;
     display: flex;
@@ -799,7 +799,7 @@ html.dark-mode body .login-logo {
     border-radius: 20px;
     margin-bottom: 15px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.15);
     max-width: 100%;
     overflow-x: hidden;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
@@ -811,7 +811,7 @@ html.dark-mode body .shared-note {
 }
 
 .shared-note h3 {
-    color: #1e5a9e;
+    color: #228b22;
     margin: 15px 0;
     word-wrap: break-word;
     transition: color 0.5s ease;
@@ -822,7 +822,7 @@ html.dark-mode body .shared-note h3 {
 }
 
 .shared-by {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 14px;
     margin-top: 10px;
     transition: color 0.5s ease;
@@ -847,7 +847,7 @@ html.dark-mode body .shared-by {
     border-radius: 15px;
     text-align: center;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.15);
     transition: all 0.3s, background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -858,7 +858,7 @@ html.dark-mode body .stat-card {
 
 .stat-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.25);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.25);
 }
 
 html.dark-mode body .stat-card:hover {
@@ -868,7 +868,7 @@ html.dark-mode body .stat-card:hover {
 .stat-number {
     font-size: 32px;
     font-weight: bold;
-    color: #1e5a9e;
+    color: #228b22;
     transition: color 0.5s ease;
 }
 
@@ -877,7 +877,7 @@ html.dark-mode body .stat-number {
 }
 
 .stat-card div:last-child {
-    color: #4a90e2;
+    color: #2ecc71;
     margin-top: 5px;
     word-wrap: break-word;
     transition: color 0.5s ease;
@@ -889,12 +889,12 @@ html.dark-mode body .stat-card div:last-child {
 
 /* Footer */
 .footer {
-    background-color: rgba(74, 144, 226, 0.9);
+    background-color: rgba(46, 204, 113, 0.9);
     padding: 40px 20px;
     border-radius: 20px 20px 0 0;
     margin-top: 50px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 -4px 15px rgba(30, 90, 158, 0.2);
+    box-shadow: 0 -4px 15px rgba(39, 174, 96, 0.2);
     max-width: 100%;
     overflow-x: hidden;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
@@ -946,14 +946,14 @@ html.dark-mode body .contact-card {
 }
 
 .contact-card p {
-    color: #e8f4f8;
+    color: #e8f8eb;
     word-wrap: break-word;
 }
 
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
-    background-color: rgba(30, 90, 158, 0.9);
+    background-color: rgba(39, 174, 96, 0.9);
     border: none;
     color: #ffffff;
     padding: 10px 15px;
@@ -981,12 +981,12 @@ html.dark-mode body .contact-card {
         position: absolute;
         top: 70px;
         right: 20px;
-        background-color: rgba(74, 144, 226, 0.95);
+        background-color: rgba(46, 204, 113, 0.95);
         padding: 10px;
         border-radius: 15px;
         z-index: 100;
         backdrop-filter: blur(15px);
-        box-shadow: 0 4px 15px rgba(30, 90, 158, 0.3);
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
     }
 
     nav.active {
@@ -1110,8 +1110,8 @@ html.dark-mode body .popup-content {
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
-    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-    background-color: rgba(74, 144, 226, 0.1);
+    border-bottom: 1px solid rgba(46, 204, 113, 0.2);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 20px 20px 0 0;
 }
 
@@ -1121,7 +1121,7 @@ html.dark-mode body .popup-header {
 }
 
 .popup-title {
-    color: #1e5a9e;
+    color: #228b22;
     font-size: 20px;
     margin: 0;
 }
@@ -1134,7 +1134,7 @@ html.dark-mode body .popup-title {
     background: none;
     border: none;
     font-size: 28px;
-    color: #1e5a9e;
+    color: #228b22;
     cursor: pointer;
     padding: 0;
     line-height: 1;
@@ -1190,7 +1190,7 @@ html.dark-mode body .popup-close {
 }
 
 .toast-info {
-    background-color: #3498db;
+    background-color: #2ecc71;
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
 }
 
@@ -1239,7 +1239,7 @@ html.dark-mode body .popup-close {
 .quick-view-image {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 .quick-view-details {
@@ -1249,7 +1249,7 @@ html.dark-mode body .popup-close {
 }
 
 .quick-view-description {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -1261,7 +1261,7 @@ html.dark-mode body .quick-view-description {
 .quick-view-price {
     font-size: 24px;
     font-weight: bold;
-    color: #1e5a9e;
+    color: #228b22;
 }
 
 html.dark-mode body .quick-view-price {
@@ -1273,7 +1273,7 @@ html.dark-mode body .quick-view-price {
     align-items: center;
     gap: 15px;
     padding: 15px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 12px;
 }
 
@@ -1282,7 +1282,7 @@ html.dark-mode body .quantity-selector {
 }
 
 .quantity-label {
-    color: #1e5a9e;
+    color: #228b22;
     font-weight: 600;
 }
 
@@ -1300,7 +1300,7 @@ html.dark-mode body .quantity-label {
     width: 36px;
     height: 36px;
     border: none;
-    background-color: rgba(74, 144, 226, 0.9);
+    background-color: rgba(46, 204, 113, 0.9);
     color: white;
     border-radius: 50%;
     cursor: pointer;
@@ -1312,14 +1312,14 @@ html.dark-mode body .quantity-label {
 }
 
 .quantity-btn:hover {
-    background-color: rgba(30, 90, 158, 0.95);
+    background-color: rgba(39, 174, 96, 0.95);
     transform: scale(1.1);
 }
 
 .quantity-value {
     font-size: 18px;
     font-weight: bold;
-    color: #1e5a9e;
+    color: #228b22;
     min-width: 30px;
     text-align: center;
 }
@@ -1346,17 +1346,17 @@ html.dark-mode body .quantity-value {
 .subscription-input {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid rgba(74, 144, 226, 0.3);
+    border: 2px solid rgba(46, 204, 113, 0.3);
     border-radius: 12px;
-    background-color: rgba(74, 144, 226, 0.05);
-    color: #1e3a5f;
+    background-color: rgba(46, 204, 113, 0.05);
+    color: #1e4f2b;
     font-size: 16px;
     transition: all 0.3s;
 }
 
 .subscription-select:focus,
 .subscription-input:focus {
-    border-color: #4a90e2;
+    border-color: #2ecc71;
     outline: none;
     background-color: white;
 }
@@ -1369,10 +1369,10 @@ html.dark-mode body .subscription-input {
 }
 
 .subscription-summary {
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     padding: 15px;
     border-radius: 12px;
-    color: #1e5a9e;
+    color: #228b22;
 }
 
 html.dark-mode body .subscription-summary {
@@ -1430,7 +1430,7 @@ html.dark-mode body .subscription-summary {
 }
 
 .subscription-success p {
-    color: #4a90e2;
+    color: #2ecc71;
 }
 
 html.dark-mode body .subscription-success p {
@@ -1447,7 +1447,7 @@ html.dark-mode body .subscription-success p {
     max-height: 500px;
     background-color: rgba(255, 255, 255, 0.98);
     border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 15px 50px rgba(46, 204, 113, 0.3);
     z-index: 1500;
     display: flex;
     flex-direction: column;
@@ -1477,7 +1477,7 @@ html.dark-mode body .chatbot-popup {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: linear-gradient(135deg, #4a90e2, #1e5a9e);
+    background: linear-gradient(135deg, #2ecc71, #228b22);
     color: white;
 }
 
@@ -1530,7 +1530,7 @@ html.dark-mode body .chatbot-popup {
     flex-direction: column;
     gap: 10px;
     max-height: 280px;
-    background-color: rgba(74, 144, 226, 0.05);
+    background-color: rgba(46, 204, 113, 0.05);
 }
 
 html.dark-mode body .chatbot-messages {
@@ -1560,7 +1560,7 @@ html.dark-mode body .chatbot-messages {
 
 .chatbot-message.bot {
     background-color: white;
-    color: #1e3a5f;
+    color: #1e4f2b;
     align-self: flex-start;
     border-bottom-left-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1572,7 +1572,7 @@ html.dark-mode body .chatbot-message.bot {
 }
 
 .chatbot-message.user {
-    background: linear-gradient(135deg, #4a90e2, #1e5a9e);
+    background: linear-gradient(135deg, #2ecc71, #228b22);
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 5px;
@@ -1587,7 +1587,7 @@ html.dark-mode body .chatbot-message.bot {
 .typing-dot {
     width: 8px;
     height: 8px;
-    background-color: #4a90e2;
+    background-color: #2ecc71;
     border-radius: 50%;
     animation: typingBounce 1.4s infinite ease-in-out;
 }
@@ -1623,7 +1623,7 @@ html.dark-mode body .chatbot-message.bot {
     display: flex;
     gap: 8px;
     padding: 10px 15px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     overflow-x: auto;
 }
 
@@ -1634,19 +1634,19 @@ html.dark-mode body .chatbot-quick-questions {
 .chatbot-quick-questions button {
     padding: 8px 12px;
     background-color: white;
-    border: 1px solid rgba(74, 144, 226, 0.3);
+    border: 1px solid rgba(46, 204, 113, 0.3);
     border-radius: 20px;
     font-size: 12px;
-    color: #1e5a9e;
+    color: #228b22;
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.3s;
 }
 
 .chatbot-quick-questions button:hover {
-    background-color: #4a90e2;
+    background-color: #2ecc71;
     color: white;
-    border-color: #4a90e2;
+    border-color: #2ecc71;
 }
 
 html.dark-mode body .chatbot-quick-questions button {
@@ -1660,7 +1660,7 @@ html.dark-mode body .chatbot-quick-questions button {
     gap: 10px;
     padding: 15px;
     background-color: white;
-    border-top: 1px solid rgba(74, 144, 226, 0.2);
+    border-top: 1px solid rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .chatbot-input-area {
@@ -1671,16 +1671,16 @@ html.dark-mode body .chatbot-input-area {
 .chatbot-input {
     flex: 1;
     padding: 12px 15px;
-    border: 2px solid rgba(74, 144, 226, 0.3);
+    border: 2px solid rgba(46, 204, 113, 0.3);
     border-radius: 25px;
     font-size: 14px;
-    color: #1e3a5f;
-    background-color: rgba(74, 144, 226, 0.05);
+    color: #1e4f2b;
+    background-color: rgba(46, 204, 113, 0.05);
     transition: all 0.3s;
 }
 
 .chatbot-input:focus {
-    border-color: #4a90e2;
+    border-color: #2ecc71;
     outline: none;
 }
 
@@ -1693,7 +1693,7 @@ html.dark-mode body .chatbot-input {
 .chatbot-send-btn {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #4a90e2, #1e5a9e);
+    background: linear-gradient(135deg, #2ecc71, #228b22);
     border: none;
     border-radius: 50%;
     color: white;
@@ -1704,7 +1704,7 @@ html.dark-mode body .chatbot-input {
 
 .chatbot-send-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
 }
 
 /* ==================== NEWSLETTER POPUP ==================== */
@@ -1714,7 +1714,7 @@ html.dark-mode body .chatbot-input {
 }
 
 .newsletter-description {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 16px;
     margin-bottom: 25px;
     line-height: 1.6;
@@ -1733,15 +1733,15 @@ html.dark-mode body .newsletter-description {
 .newsletter-input {
     flex: 1;
     padding: 14px 18px;
-    border: 2px solid rgba(74, 144, 226, 0.3);
+    border: 2px solid rgba(46, 204, 113, 0.3);
     border-radius: 12px;
     font-size: 15px;
-    color: #1e3a5f;
-    background-color: rgba(74, 144, 226, 0.05);
+    color: #1e4f2b;
+    background-color: rgba(46, 204, 113, 0.05);
 }
 
 .newsletter-input:focus {
-    border-color: #4a90e2;
+    border-color: #2ecc71;
     outline: none;
 }
 
@@ -1766,7 +1766,7 @@ html.dark-mode body .newsletter-input {
 }
 
 .newsletter-skip:hover {
-    color: #4a90e2;
+    color: #2ecc71;
 }
 
 .newsletter-privacy {
@@ -1805,7 +1805,7 @@ html.dark-mode body .newsletter-input {
 }
 
 .newsletter-success p {
-    color: #4a90e2;
+    color: #2ecc71;
 }
 
 /* ==================== CART POPUP ==================== */
@@ -1826,7 +1826,7 @@ html.dark-mode body .newsletter-input {
 }
 
 .cart-empty h3 {
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 10px;
 }
 
@@ -1835,7 +1835,7 @@ html.dark-mode body .cart-empty h3 {
 }
 
 .cart-empty p {
-    color: #4a90e2;
+    color: #2ecc71;
     margin-bottom: 20px;
 }
 
@@ -1855,7 +1855,7 @@ html.dark-mode body .cart-empty p {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 12px;
 }
 
@@ -1864,7 +1864,7 @@ html.dark-mode body .cart-item {
 }
 
 .cart-item-info h4 {
-    color: #1e5a9e;
+    color: #228b22;
     margin: 0 0 5px 0;
 }
 
@@ -1873,7 +1873,7 @@ html.dark-mode body .cart-item-info h4 {
 }
 
 .cart-item-info p {
-    color: #4a90e2;
+    color: #2ecc71;
     margin: 0;
 }
 
@@ -1900,7 +1900,7 @@ html.dark-mode body .cart-item-info p {
 }
 
 .cart-footer {
-    border-top: 2px solid rgba(74, 144, 226, 0.2);
+    border-top: 2px solid rgba(46, 204, 113, 0.2);
     padding-top: 20px;
 }
 
@@ -1914,7 +1914,7 @@ html.dark-mode body .cart-footer {
     align-items: center;
     margin-bottom: 15px;
     font-size: 18px;
-    color: #1e5a9e;
+    color: #228b22;
 }
 
 html.dark-mode body .cart-total {
@@ -1945,15 +1945,15 @@ html.dark-mode body .cart-total {
 
 @keyframes chatbotPulse {
     0% {
-        box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+        box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
     }
 
     50% {
-        box-shadow: 0 6px 30px rgba(74, 144, 226, 0.7), 0 0 0 10px rgba(74, 144, 226, 0.1);
+        box-shadow: 0 6px 30px rgba(46, 204, 113, 0.7), 0 0 0 10px rgba(46, 204, 113, 0.1);
     }
 
     100% {
-        box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+        box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
     }
 }
 
@@ -2001,7 +2001,7 @@ html.dark-mode body .cart-total {
     border-radius: 20px;
     margin: 30px 0;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .testimonials-section {
@@ -2011,7 +2011,7 @@ html.dark-mode body .testimonials-section {
 
 .testimonials-section h2 {
     text-align: center;
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 25px;
 }
 
@@ -2026,7 +2026,7 @@ html.dark-mode body .testimonials-section h2 {
 }
 
 .testimonial-card {
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     padding: 25px;
     border-radius: 15px;
     position: relative;
@@ -2039,12 +2039,12 @@ html.dark-mode body .testimonial-card {
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.2);
 }
 
 .testimonial-quote {
     font-size: 40px;
-    color: #4a90e2;
+    color: #2ecc71;
     opacity: 0.3;
     position: absolute;
     top: 10px;
@@ -2052,7 +2052,7 @@ html.dark-mode body .testimonial-card {
 }
 
 .testimonial-text {
-    color: #1e3a5f;
+    color: #1e4f2b;
     font-style: italic;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -2072,7 +2072,7 @@ html.dark-mode body .testimonial-text {
 .testimonial-avatar {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #4a90e2, #1e5a9e);
+    background: linear-gradient(135deg, #2ecc71, #228b22);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2082,7 +2082,7 @@ html.dark-mode body .testimonial-text {
 }
 
 .testimonial-info h4 {
-    color: #1e5a9e;
+    color: #228b22;
     margin: 0;
     font-size: 15px;
 }
@@ -2092,7 +2092,7 @@ html.dark-mode body .testimonial-info h4 {
 }
 
 .testimonial-info span {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 13px;
 }
 
@@ -2195,7 +2195,7 @@ html.dark-mode body .testimonial-info span {
     border-radius: 20px;
     margin: 30px 0;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .why-choose-section {
@@ -2205,7 +2205,7 @@ html.dark-mode body .why-choose-section {
 
 .why-choose-section h2 {
     text-align: center;
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 25px;
 }
 
@@ -2222,7 +2222,7 @@ html.dark-mode body .why-choose-section h2 {
 .why-choose-card {
     text-align: center;
     padding: 25px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border-radius: 15px;
     transition: all 0.3s;
 }
@@ -2233,7 +2233,7 @@ html.dark-mode body .why-choose-card {
 
 .why-choose-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.25);
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.25);
 }
 
 .why-choose-icon {
@@ -2267,7 +2267,7 @@ html.dark-mode body .why-choose-card {
 }
 
 .why-choose-card h3 {
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 10px;
 }
 
@@ -2276,7 +2276,7 @@ html.dark-mode body .why-choose-card h3 {
 }
 
 .why-choose-card p {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 14px;
 }
 
@@ -2292,7 +2292,7 @@ html.dark-mode body .why-choose-card p {
     border-radius: 20px;
     margin: 30px 0;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .delivery-steps-section {
@@ -2302,7 +2302,7 @@ html.dark-mode body .delivery-steps-section {
 
 .delivery-steps-section h2 {
     text-align: center;
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 25px;
 }
 
@@ -2328,7 +2328,7 @@ html.dark-mode body .delivery-steps-section h2 {
 .step-number {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #4a90e2, #1e5a9e);
+    background: linear-gradient(135deg, #2ecc71, #228b22);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -2345,7 +2345,7 @@ html.dark-mode body .delivery-steps-section h2 {
 }
 
 .delivery-step h4 {
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 8px;
 }
 
@@ -2354,7 +2354,7 @@ html.dark-mode body .delivery-step h4 {
 }
 
 .delivery-step p {
-    color: #4a90e2;
+    color: #2ecc71;
     font-size: 14px;
 }
 
@@ -2368,7 +2368,7 @@ html.dark-mode body .delivery-step p {
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
-    color: #4a90e2;
+    color: #2ecc71;
 }
 
 /* ==================== FAQ ACCORDION ==================== */
@@ -2379,7 +2379,7 @@ html.dark-mode body .delivery-step p {
     border-radius: 20px;
     margin: 30px 0;
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .faq-section {
@@ -2389,7 +2389,7 @@ html.dark-mode body .faq-section {
 
 .faq-section h2 {
     text-align: center;
-    color: #1e5a9e;
+    color: #228b22;
     margin-bottom: 25px;
 }
 
@@ -2399,7 +2399,7 @@ html.dark-mode body .faq-section h2 {
 
 .faq-item {
     margin-bottom: 10px;
-    border: 2px solid rgba(74, 144, 226, 0.2);
+    border: 2px solid rgba(46, 204, 113, 0.2);
     border-radius: 12px;
     overflow: hidden;
 }
@@ -2411,12 +2411,12 @@ html.dark-mode body .faq-item {
 .faq-question {
     width: 100%;
     padding: 18px 20px;
-    background-color: rgba(74, 144, 226, 0.1);
+    background-color: rgba(46, 204, 113, 0.1);
     border: none;
     text-align: left;
     font-size: 16px;
     font-weight: 600;
-    color: #1e5a9e;
+    color: #228b22;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -2425,7 +2425,7 @@ html.dark-mode body .faq-item {
 }
 
 .faq-question:hover {
-    background-color: rgba(74, 144, 226, 0.2);
+    background-color: rgba(46, 204, 113, 0.2);
 }
 
 html.dark-mode body .faq-question {
@@ -2459,7 +2459,7 @@ html.dark-mode body .faq-answer {
 
 .faq-answer p {
     padding: 20px;
-    color: #4a90e2;
+    color: #2ecc71;
     line-height: 1.6;
     margin: 0;
 }
@@ -2474,13 +2474,13 @@ html.dark-mode body .faq-answer p {
     position: relative;
     cursor: pointer;
     padding: 10px;
-    background-color: rgba(30, 90, 158, 0.8);
+    background-color: rgba(39, 174, 96, 0.8);
     border-radius: 12px;
     transition: all 0.3s;
 }
 
 .cart-icon-container:hover {
-    background-color: rgba(22, 66, 117, 0.9);
+    background-color: rgba(30, 130, 76, 0.9);
     transform: translateY(-2px);
 }
 

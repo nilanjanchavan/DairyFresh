@@ -52,7 +52,7 @@ function Sidebar(props) {
 
             <Popup isOpen={popup.isOpen} onClose={handlePopupClose} title={popup.category}>
                 <div className="category-products">
-                    <p style={{ marginBottom: '15px', color: '#4a90e2' }}>Select a product to add:</p>
+                    <p style={{ marginBottom: '15px', color: '#2ecc71' }}>Select a product to add:</p>
                     {popup.products && popup.products.map(function (product, index) {
                         return (
                             <div
@@ -62,7 +62,7 @@ function Sidebar(props) {
                                 style={{
                                     padding: '12px 15px',
                                     marginBottom: '10px',
-                                    backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                                    backgroundColor: 'rgba(46, 204, 113, 0.1)',
                                     borderRadius: '10px',
                                     cursor: 'pointer',
                                     transition: 'all 0.3s',

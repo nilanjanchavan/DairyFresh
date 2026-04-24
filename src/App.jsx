@@ -161,19 +161,19 @@ function App() {
             <Popup isOpen={isChatbotPopupOpen} onClose={handleChatbotPopupClose} title="💬 Chat Support">
                 <div style={{ textAlign: 'center', padding: '30px 0' }}>
                     <div style={{ fontSize: '60px', marginBottom: '20px' }}>🤖</div>
-                    <h3 style={{ color: '#1e5a9e', marginBottom: '15px' }}>Coming Soon!</h3>
-                    <p style={{ color: '#4a90e2', marginBottom: '20px' }}>
+                    <h3 style={{ color: '#228b22', marginBottom: '15px' }}>Coming Soon!</h3>
+                    <p style={{ color: '#2ecc71', marginBottom: '20px' }}>
                         Our AI-powered chat support is under development.
                         For now, please contact us via email or phone.
                     </p>
                     <div style={{
-                        backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                        backgroundColor: 'rgba(46, 204, 113, 0.1)',
                         padding: '15px',
                         borderRadius: '12px',
                         marginBottom: '15px'
                     }}>
-                        <p style={{ margin: '5px 0', color: '#1e5a9e' }}>📧 doodhwaala@dairyfresh.com</p>
-                        <p style={{ margin: '5px 0', color: '#1e5a9e' }}>📱 1800-XXXX-XXXX</p>
+                        <p style={{ margin: '5px 0', color: '#228b22' }}>📧 doodhwaala@dairyfresh.com</p>
+                        <p style={{ margin: '5px 0', color: '#228b22' }}>📱 1800-XXXX-XXXX</p>
                     </div>
                     <button className="btn" onClick={handleChatbotPopupClose}>
                         Got it!

@@ -103,7 +103,7 @@ function AboutPage(props) {
                                 <div style={{
                                     width: '80px',
                                     height: '80px',
-                                    background: 'linear-gradient(135deg, #4a90e2, #1e5a9e)',
+                                    background: 'linear-gradient(135deg, #2ecc71, #228b22)',
                                     borderRadius: '50%',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -115,7 +115,7 @@ function AboutPage(props) {
                                     👤
                                 </div>
                                 <h3>{founder.name}</h3>
-                                <p style={{ color: '#4a90e2', marginBottom: '5px' }}>{founder.role}</p>
+                                <p style={{ color: '#2ecc71', marginBottom: '5px' }}>{founder.role}</p>
                                 <p style={{ fontSize: '12px', opacity: 0.7 }}>{founder.id}</p>
                             </div>
                         )
@@ -132,14 +132,14 @@ function AboutPage(props) {
                                 gap: '20px',
                                 padding: '15px',
                                 marginBottom: '10px',
-                                backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                                backgroundColor: 'rgba(46, 204, 113, 0.1)',
                                 borderRadius: '12px',
                                 transition: 'all 0.3s'
                             }}>
                                 <div style={{
                                     width: '50px',
                                     height: '50px',
-                                    background: 'linear-gradient(135deg, #4a90e2, #1e5a9e)',
+                                    background: 'linear-gradient(135deg, #2ecc71, #228b22)',
                                     borderRadius: '50%',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -149,8 +149,8 @@ function AboutPage(props) {
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h4 style={{ color: '#1e5a9e' }}>{item.year}</h4>
-                                    <p style={{ color: '#4a90e2', margin: 0 }}>{item.event}</p>
+                                    <h4 style={{ color: '#228b22' }}>{item.year}</h4>
+                                    <p style={{ color: '#2ecc71', margin: 0 }}>{item.event}</p>
                                 </div>
                             </div>
                         )

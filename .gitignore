@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+
+# Maven
+target/
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project

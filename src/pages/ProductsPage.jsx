@@ -130,8 +130,8 @@ function ProductsPage(props) {
                         cursor: 'pointer',
                         transition: 'all 0.3s',
                         fontWeight: '600',
-                        backgroundColor: activeFilter === filter.id ? 'rgba(74, 144, 226, 0.9)' : 'rgba(74, 144, 226, 0.2)',
-                        color: activeFilter === filter.id ? 'white' : '#1e5a9e'
+                        backgroundColor: activeFilter === filter.id ? 'rgba(46, 204, 113, 0.9)' : 'rgba(46, 204, 113, 0.2)',
+                        color: activeFilter === filter.id ? 'white' : '#228b22'
                     }
                     return (
                         <button
@@ -169,7 +169,7 @@ function ProductsPage(props) {
                                             alignItems: 'center',
                                             padding: '10px',
                                             marginBottom: '8px',
-                                            backgroundColor: 'rgba(74, 144, 226, 0.05)',
+                                            backgroundColor: 'rgba(46, 204, 113, 0.05)',
                                             borderRadius: '8px',
                                             cursor: 'pointer',
                                             transition: 'all 0.3s'

@@ -79,7 +79,7 @@ function Footer(props) {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginTop: '30px' }}>
                     <div className="contact-form">
-                        <h3 style={{ color: '#1e5a9e', marginBottom: '20px' }}>Send us a Message</h3>
+                        <h3 style={{ color: '#228b22', marginBottom: '20px' }}>Send us a Message</h3>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <input type="text" placeholder="Your name" required />
@@ -126,7 +126,7 @@ function Footer(props) {
                                     style={{
                                         padding: '12px 20px',
                                         backgroundColor: 'white',
-                                        color: '#1e5a9e',
+                                        color: '#228b22',
                                         border: 'none',
                                         borderRadius: '10px',
                                         fontWeight: 'bold',
@@ -222,7 +222,7 @@ function Footer(props) {
                 <div style={{ textAlign: 'center', padding: '20px 0' }}>
                     <div style={{ fontSize: '60px', marginBottom: '15px' }}>✉️</div>
                     <h3 style={{ color: '#27ae60', marginBottom: '10px' }}>You're on the list!</h3>
-                    <p style={{ color: '#4a90e2' }}>
+                    <p style={{ color: '#2ecc71' }}>
                         Thanks for subscribing to our newsletter. You'll receive exclusive offers soon!
                     </p>
                 </div>
