@@ -1,8 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { AuthService } from '../services/AuthService.js'
 import Popup from '../components/Popup.jsx'
 
 function LoginPage(props) {
+    var navigate = useNavigate();
     var isDarkMode = props.isDarkMode
     var showToast = props.showToast
 
@@ -36,7 +39,7 @@ function LoginPage(props) {
 
     var loginLogoSrc = isDarkMode ? '/images/login-logo_dark.png' : '/images/login-logo.png'
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault()
 
         if (email.trim() === '' || password.trim() === '') {
@@ -53,7 +56,21 @@ function LoginPage(props) {
             return
         }
 
-        setShowSuccessPopup(true)
+        if (mode === 'login') {
+            try {
+                const response = await AuthService.login(email, password);
+                if (response.role === 'admin') {
+                    if (showToast) showToast('Admin login successful!', 'success');
+                    navigate('/admin');
+                } else {
+                    setShowSuccessPopup(true);
+                }
+            } catch (err) {
+                if (showToast) showToast('Invalid credentials (try admin@dairyfresh.com / admin123)', 'error');
+            }
+        } else {
+            setShowSuccessPopup(true)
+        }
     }
 
     function handleSuccessClose() {

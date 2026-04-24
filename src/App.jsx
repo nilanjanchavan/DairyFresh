@@ -14,6 +14,7 @@ import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import AdminPanel from './pages/AdminPanel.jsx'
 
 function App() {
     var savedTheme = localStorage.getItem('theme')
@@ -224,6 +225,12 @@ function App() {
                 } />
                 <Route path="/login" element={
                     <LoginPage
+                        isDarkMode={isDarkMode}
+                        showToast={showToast}
+                    />
+                } />
+                <Route path="/admin" element={
+                    <AdminPanel
                         isDarkMode={isDarkMode}
                         showToast={showToast}
                     />
