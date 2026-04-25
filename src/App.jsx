@@ -16,6 +16,7 @@ import ProductsPage from './pages/ProductsPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import AdminPanel from './pages/AdminPanel.jsx'
 import { AuthService } from './services/AuthService.js'
+import { NotificationService } from './services/NotificationService.js'
 
 function App() {
     var savedTheme = localStorage.getItem('theme')
@@ -54,9 +55,14 @@ function App() {
     var user = userState[0]
     var setUser = userState[1]
 
+    // Notification unread count
+    var notificationCountState = useState(0)
+    var unreadNotifications = notificationCountState[0]
+    var setUnreadNotifications = notificationCountState[1]
+
     // Check session on app load
     useEffect(function() {
-        AuthService.getSession().then(function(sessionUser) {
+        AuthService.getSession().then(async function(sessionUser) {
             if (sessionUser && sessionUser.email) {
                 setUser(sessionUser)
                 // Load user's cart from DB
@@ -65,9 +71,28 @@ function App() {
                         setCartItems(items)
                     }
                 })
+
+                // Register for push notifications
+                const warningMsg = await NotificationService.requestPermissionAndGetToken(sessionUser.email);
+                if (warningMsg && typeof warningMsg === 'string') {
+                    showToast(warningMsg, 'error');
+                }
             }
         })
     }, [])
+
+    useEffect(function() {
+        if (user) {
+            const unsubscribe = NotificationService.setupForegroundListener((payload) => {
+                showToast(payload.notification?.title + ": " + payload.notification?.body, 'info');
+                setUnreadNotifications(prev => prev + 1);
+            });
+            return () => {
+                if (unsubscribe) unsubscribe();
+            };
+        }
+    }, [user])
+
 
     // Save cart to DB whenever it changes (only if logged in)
     var cartSyncTimeout = useState(null)
@@ -198,7 +223,7 @@ function App() {
         return total
     }
 
-    function handleLogin(userData) {
+    async function handleLogin(userData) {
         setUser(userData)
         // Load user's cart from DB
         AuthService.getCart().then(function(items) {
@@ -206,9 +231,17 @@ function App() {
                 setCartItems(items)
             }
         })
+
+        const warningMsg = await NotificationService.requestPermissionAndGetToken(userData.email);
+        if (warningMsg && typeof warningMsg === 'string') {
+            showToast(warningMsg, 'error');
+        }
     }
 
     function handleLogout() {
+        if (user) {
+            NotificationService.unregisterDevice(user.email);
+        }
         AuthService.logout().then(function() {
             setUser(null)
             setCartItems([])
@@ -249,6 +282,8 @@ function App() {
                 onCartClick={handleCartClick}
                 user={user}
                 onLogout={handleLogout}
+                unreadNotifications={unreadNotifications}
+                onClearNotifications={() => setUnreadNotifications(0)}
             />
             <Toast
                 message={toast.message}

@@ -1,18 +1,21 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import QuoteSection from '../components/QuoteSection.jsx'
 import Sidebar from '../components/Sidebar.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import Footer from '../components/Footer.jsx'
 import ProductQuickView from '../components/ProductQuickView.jsx'
 import SubscriptionPopup from '../components/SubscriptionPopup.jsx'
+import ShareButton from '../components/ShareButton.jsx'
 
 function HomePage(props) {
     var isDarkMode = props.isDarkMode
     var onAddToCart = props.onAddToCart
     var showToast = props.showToast
     var onOpenNewsletter = props.onOpenNewsletter
+    var navigate = useNavigate()
 
     var quickViewState = useState({ isOpen: false, product: null })
     var quickView = quickViewState[0]
@@ -211,6 +214,10 @@ function HomePage(props) {
         }
     }
 
+    function handleExploreProducts() {
+        navigate('/products')
+    }
+
     function renderStars(count) {
         var stars = ''
         for (var i = 0; i < count; i = i + 1) {
@@ -258,7 +265,24 @@ function HomePage(props) {
 
                     <div className="content-header">
                         <h1>Our Premium Dairy Products</h1>
-                        <p>Subscribe today and enjoy fresh dairy delivered to your door</p>
+                        <p style={{
+                            fontSize: '24px',
+                            marginBottom: '40px',
+                            textShadow: '0 2px 4px rgba(0,0,0,0.5)',
+                            maxWidth: '800px',
+                            margin: '0 auto 40px auto'
+                        }}>
+                            Experience the purity of farm-fresh dairy products delivered straight to your doorstep.
+                        </p>
+                        <div style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
+                            <button className="btn" onClick={handleExploreProducts} style={{ fontSize: '18px', padding: '15px 40px' }}>
+                                Explore Products
+                            </button>
+                            <ShareButton 
+                                title="DairyFresh - Farm Fresh Dairy Products Delivered"
+                                text="I just discovered DairyFresh! They deliver premium quality, farm-fresh milk and dairy products directly to your doorstep."
+                            />
+                        </div>
                         <button className="btn" onClick={handleStartSubscription}>🛒 Start Your Subscription</button>
                     </div>
 

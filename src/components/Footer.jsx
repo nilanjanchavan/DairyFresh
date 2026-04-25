@@ -38,6 +38,7 @@ function Footer(props) {
     }
 
     var socialLinks = [
+        { icon: '📱', name: 'WhatsApp', url: 'https://wa.me/14155238886?text=Hi' },
         { icon: '📘', name: 'Facebook', url: '#' },
         { icon: '📸', name: 'Instagram', url: '#' },
         { icon: '🐦', name: 'Twitter', url: '#' },

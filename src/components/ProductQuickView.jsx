@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Popup from './Popup.jsx'
+import ShareButton from './ShareButton.jsx'
 
 function ProductQuickView(props) {
     var isOpen = props.isOpen
@@ -60,9 +61,15 @@ function ProductQuickView(props) {
                         </div>
                     </div>
 
-                    <button className="btn add-to-cart-btn" onClick={handleAddToCart}>
-                        🛒 Add to Cart
-                    </button>
+                    <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                        <button className="btn add-to-cart-btn" onClick={handleAddToCart} style={{ flex: 1 }}>
+                            🛒 Add to Cart
+                        </button>
+                        <ShareButton 
+                            title={`Buy ${product.title} from DairyFresh`}
+                            text={`I found this premium ${product.title} at DairyFresh. It's ${product.price}.`}
+                        />
+                    </div>
                 </div>
             </div>
         </Popup>

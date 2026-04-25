@@ -10,6 +10,9 @@ function Header(props) {
     var onCartClick = props.onCartClick
     var user = props.user
     var onLogout = props.onLogout
+    var unreadNotifications = props.unreadNotifications || 0
+    var onClearNotifications = props.onClearNotifications
+
 
     var menuState = useState(false)
     var isMenuOpen = menuState[0]
@@ -100,6 +103,15 @@ function Header(props) {
                         </span>
                     </label>
                 </div>
+
+                {user && (
+                    <div className="notification-icon-container" onClick={onClearNotifications} style={{ position: 'relative', cursor: 'pointer', marginRight: '15px' }}>
+                        <span className="notification-icon" style={{ fontSize: '24px' }}>🔔</span>
+                        {unreadNotifications > 0 && (
+                            <span className="cart-count">{unreadNotifications}</span>
+                        )}
+                    </div>
+                )}
 
                 <div className="cart-icon-container" onClick={onCartClick}>
                     <span className="cart-icon">🛒</span>

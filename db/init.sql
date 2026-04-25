@@ -20,3 +20,21 @@ CREATE TABLE IF NOT EXISTS cart_items (
     UNIQUE KEY unique_user_product (user_email, product_title),
     FOREIGN KEY (user_email) REFERENCES users(email) ON DELETE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS user_devices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_email VARCHAR(100) NOT NULL,
+    fcm_token VARCHAR(300) NOT NULL,
+    device_fingerprint VARCHAR(100) NOT NULL,
+    login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_email) REFERENCES users(email) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS whatsapp_conversations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    phone_number VARCHAR(20) NOT NULL,
+    customer_name VARCHAR(100),
+    last_message VARCHAR(500),
+    is_incoming BOOLEAN,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -64,52 +64,85 @@ This produces a `backend.war` file in the `backend/target/` directory.
 
 ---
 
-## ☁️ Production / AWS Deployment (Docker)
+## ☁️ Production / AWS Deployment (Step-by-Step EC2 Guide)
 
-The project is fully pre-configured for containerized deployment, perfect for pulling into an AWS EC2 instance, ECS, or any standard Linux VPS. 
+The project is fully pre-configured for containerized deployment using Docker Compose. Here is a detailed guide to deploying this stack on an AWS EC2 instance.
 
-The provided `docker-compose.yml` spins up:
-1. **Nginx:** Acting as a reverse proxy (serving the React static build on `/` and proxying `/api/` traffic to Tomcat).
-2. **Tomcat 10:** Running the Java 21 backend.
-3. **MySQL 8:** Serving the `dairyfresh_db`.
+### Phase 1: AWS EC2 Provisioning
+1. **Launch an EC2 Instance:**
+   * Go to the AWS EC2 Console and click "Launch Instance".
+   * Select **Ubuntu Server 24.04 LTS** (or 22.04 LTS).
+   * Choose an instance type (e.g., `t3.micro` for testing, `t3.small` for production).
+   * Select or create a Key Pair for SSH access.
+2. **Configure Security Groups (Firewall):**
+   * Edit the inbound rules of the instance's security group to allow the following traffic:
+     * **SSH (Port 22):** Your IP
+     * **HTTP (Port 80):** Anywhere (0.0.0.0/0)
+     * **HTTPS (Port 443):** Anywhere (0.0.0.0/0)
 
-### Step-by-Step Deployment Guide
+### Phase 2: Server Setup (Install Docker)
+1. **Connect to your instance via SSH:**
+   ```bash
+   ssh -i /path/to/your-key.pem ubuntu@YOUR_EC2_PUBLIC_IP
+   ```
+2. **Install Docker and Docker Compose:**
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y docker.io docker-compose-v2
+   sudo usermod -aG docker $USER
+   # Log out and log back in for docker group changes to take effect
+   ```
+
+### Phase 3: Application Configuration
 1. **Clone the Repo on your Server**:
    ```bash
    git clone https://github.com/DistantMyth/DairyFresh.git
    cd DairyFresh
    ```
 
-2. **Configure Environment Variables**:
-   We use a `.env` file to securely inject database credentials into both the Java backend and the MySQL container.
+2. **Configure Environment Variables & Credentials**:
+   We use a `.env` file to securely inject database, Twilio, and Firebase credentials into the stack.
    ```bash
    cp .env.example .env
    nano .env
    ```
-   *Edit the `.env` file to set your actual production database passwords.*
+   *Edit the `.env` file to set your actual production database passwords, Firebase VAPID key, Twilio SID/Auth Token, etc.*
 
-3. **Build the Artifacts**:
-   Before building the Docker containers, you must build the React static files and the Java `.war` file locally on the server (or CI pipeline).
+3. **Add Firebase Service Account**:
+   If you are using Push Notifications, securely create the `firebase-service-account.json` in the root of the project:
    ```bash
+   nano firebase-service-account.json
+   ```
+   *Paste your Firebase Admin SDK JSON content here and save.*
+
+### Phase 4: Build & Deploy
+1. **Build the Artifacts**:
+   Before building the Docker containers, you must build the React static files and the Java `.war` file locally on the server (Requires Node.js and Maven). Alternatively, build them locally and use `scp` to copy the `dist` and `target` folders to the server.
+   
+   If compiling on the server:
+   ```bash
+   # Install tools
+   sudo apt install nodejs npm maven openjdk-21-jdk -y
+   
    # Build Frontend
    npm install
    npm run build
 
    # Build Backend
    cd backend
-   mvn clean package
+   mvn clean package -DskipTests
    cd ..
    ```
 
-4. **Start the Containers**:
-   To launch the entire stack in detached mode:
+2. **Start the Containers**:
+   Launch the entire stack (Nginx, Tomcat, MySQL) in detached mode:
    ```bash
-   docker-compose up -d
+   sudo docker compose up --build -d
    ```
 
-5. **Verify the Deployment**:
-   * View the application at `http://YOUR_SERVER_IP`
-   * Check the logs if necessary: `docker-compose logs -f`
+3. **Verify the Deployment**:
+   * Visit `http://YOUR_EC2_PUBLIC_IP` in your browser.
+   * View live logs to ensure backend/database health: `sudo docker compose logs -f`
 
 ---
 

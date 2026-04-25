@@ -6,4 +6,8 @@
          
     <display-name>DairyFresh Backend</display-name>
 
+    <listener>
+        <listener-class>com.dairyfresh.config.FirebaseInitializer</listener-class>
+    </listener>
+
 </web-app>

@@ -33,8 +33,20 @@ services:
       DB_PASSWORD: ${DB_PASSWORD:-dairypass}
       ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@dairyfresh.com}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
+      FIREBASE_SERVICE_ACCOUNT_PATH: ${FIREBASE_SERVICE_ACCOUNT_PATH:-./firebase-service-account.json}
+      VITE_FIREBASE_API_KEY: ${VITE_FIREBASE_API_KEY}
+      VITE_FIREBASE_AUTH_DOMAIN: ${VITE_FIREBASE_AUTH_DOMAIN}
+      VITE_FIREBASE_PROJECT_ID: ${VITE_FIREBASE_PROJECT_ID}
+      VITE_FIREBASE_MESSAGING_SENDER_ID: ${VITE_FIREBASE_MESSAGING_SENDER_ID}
+      VITE_FIREBASE_APP_ID: ${VITE_FIREBASE_APP_ID}
+      VITE_FIREBASE_VAPID_KEY: ${VITE_FIREBASE_VAPID_KEY}
+      TWILIO_ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
+      TWILIO_AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
+      TWILIO_WHATSAPP_NUMBER: ${TWILIO_WHATSAPP_NUMBER}
+      MAX_LOGIN_DEVICES: ${MAX_LOGIN_DEVICES:-3}
     volumes:
       - ./backend/target/backend.war:/usr/local/tomcat/webapps/backend.war
+      - ./firebase-service-account.json:/usr/local/tomcat/firebase-service-account.json
     depends_on:
       db:
         condition: service_healthy
