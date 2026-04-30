@@ -151,6 +151,7 @@ Thanks to the following people who have contributed to this project:
 * **Tarun Kumar** - *Lead Developer* - [@DistantMyth](https://github.com/DistantMyth)
 * **[Saksham Singhal]** - *Webpage Structuring* - [@saksham3100](https://github.com/saksham3100)
 * **[Nilanjan Chavan]** - *dynamic elements* - [@nilanjanchavan](https://github.com/nilanjanchavan)
+* **[Aradhya Verma]** - *UI/UX Designer* - [@aradhyaverma2911-cyber](https://github.com/aradhyaverma2911-cyber)
 
 ## 📝 License
 This project is open-source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
