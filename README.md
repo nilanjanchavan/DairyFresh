@@ -11,7 +11,7 @@ A responsive React frontend showcasing a variety of premium dairy products, now 
 
 ## 🛠️ Tech Stack
 * **Frontend:** React, Tailwind CSS, Vite
-* **Backend:** Java 21, Jakarta Servlets, Tomcat 10
+* **Backend:** Java 21, Spring Boot 3
 * **Database:** MySQL 8
 * **Deployment & Infrastructure:** Docker, Docker Compose, Nginx
 
@@ -48,19 +48,17 @@ npm run dev
 ```
 Navigate to `http://localhost:5173` to view the frontend interface.
 
-### 3. Backend Setup (Java / Maven)
-The backend is a standard Maven web application running on Tomcat 10.
+### 3. Backend Setup (Java / Maven / Spring Boot)
+The backend is a Spring Boot application.
 ```bash
 # Open a new terminal and navigate to the backend folder
 cd DairyFresh/backend
 
-# Use Maven to clean the target and package the project into a .war file
-mvn clean package
+# Use Maven to run the Spring Boot application locally
+mvn spring-boot:run
 ```
-This produces a `backend.war` file in the `backend/target/` directory. 
-- Deploy this `backend.war` to your local Tomcat 10 `webapps/` folder.
-- Start Tomcat. 
-- You can verify the API is running by hitting: `http://localhost:8080/backend/api/ping`
+This will automatically start an embedded Tomcat server.
+- You can verify the API is running by hitting: `http://localhost:8080/api/ping`
 
 ---
 
@@ -131,6 +129,7 @@ The project is fully pre-configured for containerized deployment using Docker Co
    # Build Backend
    cd backend
    mvn clean package -DskipTests
+   # This creates target/backend-1.0-SNAPSHOT.jar
    cd ..
    ```
 

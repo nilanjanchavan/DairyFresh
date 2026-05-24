@@ -24,7 +24,7 @@ services:
       start_period: 30s
 
   backend:
-    image: tomcat:10-jdk21
+    image: eclipse-temurin:21-jdk
     restart: always
     network_mode: host
     environment:
@@ -33,7 +33,7 @@ services:
       DB_PASSWORD: ${DB_PASSWORD:-dairypass}
       ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@dairyfresh.com}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
-      FIREBASE_SERVICE_ACCOUNT_PATH: ${FIREBASE_SERVICE_ACCOUNT_PATH:-./firebase-service-account.json}
+      FIREBASE_SERVICE_ACCOUNT_PATH: ${FIREBASE_SERVICE_ACCOUNT_PATH:-/app/firebase-service-account.json}
       VITE_FIREBASE_API_KEY: ${VITE_FIREBASE_API_KEY}
       VITE_FIREBASE_AUTH_DOMAIN: ${VITE_FIREBASE_AUTH_DOMAIN}
       VITE_FIREBASE_PROJECT_ID: ${VITE_FIREBASE_PROJECT_ID}
@@ -45,8 +45,10 @@ services:
       TWILIO_WHATSAPP_NUMBER: ${TWILIO_WHATSAPP_NUMBER}
       MAX_LOGIN_DEVICES: ${MAX_LOGIN_DEVICES:-3}
     volumes:
-      - ./backend/target/backend.war:/usr/local/tomcat/webapps/backend.war
-      - ./firebase-service-account.json:/usr/local/tomcat/firebase-service-account.json
+      - ./backend/target/backend-1.0-SNAPSHOT.jar:/app/backend.jar
+      - ./firebase-service-account.json:/app/firebase-service-account.json
+    working_dir: /app
+    command: java -jar backend.jar
     depends_on:
       db:
         condition: service_healthy
