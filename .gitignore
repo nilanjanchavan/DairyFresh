@@ -1,15 +1,65 @@
+# ========================
+# Dependencies
+# ========================
 node_modules/
+
+# ========================
+# Build Output
+# ========================
 dist/
-.env
-
-# Maven
-target/
+backend/target/
 *.war
+*.class
 
-# IDE
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.production
+firebase-service-account.json
+
+# ========================
+# Apache Tomcat (use Docker image instead)
+# ========================
+apache-tomcat-*/
+apache-tomcat-*.tar.gz
+
+# ========================
+# Competitive Programming (not part of project)
+# ========================
+*.cpp
+B_*
+E_*
+G_*
+.cph/
+
+# ========================
+# IDE / Editor
+# ========================
 .idea/
 *.iml
 .vscode/
 .settings/
 .classpath
 .project
+*.swp
+*.swo
+*~
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# Docker
+# ========================
+db_data/
