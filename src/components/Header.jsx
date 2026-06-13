@@ -139,6 +139,9 @@ function Header(props) {
                                     <div className="dropdown-user-info">
                                         <span className="dropdown-email">{user.email}</span>
                                     </div>
+                                    <button className="dropdown-item" onClick={() => { setIsDropdownOpen(false); if(props.onOrdersClick) props.onOrdersClick(); }}>
+                                        📦 My Orders
+                                    </button>
                                     {user.role === 'admin' && (
                                         <button className="dropdown-item" onClick={handleAdminClick}>
                                             ⚙️ Admin Panel

@@ -104,7 +104,7 @@ The project is fully pre-configured for containerized deployment using Docker Co
    cp .env.example .env
    nano .env
    ```
-   *Edit the `.env` file to set your actual production database passwords, Firebase VAPID key, Twilio SID/Auth Token, etc.*
+   *Edit the `.env` file to set your actual production database passwords, Firebase VAPID key, Twilio SID/Auth Token, and Mailgun credentials (for sending order confirmation emails).*
 
 3. **Add Firebase Service Account**:
    If you are using Push Notifications, securely create the `firebase-service-account.json` in the root of the project:

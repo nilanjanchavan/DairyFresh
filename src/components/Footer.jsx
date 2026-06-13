@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Popup from './Popup.jsx'
+import { AuthService } from '../services/AuthService.js'
 
 function Footer(props) {
     var showToast = props.showToast
@@ -25,11 +26,16 @@ function Footer(props) {
         setNewsletterEmail(event.target.value)
     }
 
-    function handleNewsletterSubmit(event) {
+    async function handleNewsletterSubmit(event) {
         event.preventDefault()
         if (newsletterEmail.trim() !== '') {
-            setShowSuccessPopup(true)
-            setNewsletterEmail('')
+            try {
+                await AuthService.subscribeNewsletter(newsletterEmail)
+                setShowSuccessPopup(true)
+                setNewsletterEmail('')
+            } catch (error) {
+                if (showToast) showToast(error.message, 'error')
+            }
         }
     }
 

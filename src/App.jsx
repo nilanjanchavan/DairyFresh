@@ -9,6 +9,7 @@ import ChatbotButton from './components/ChatbotButton.jsx'
 import Popup from './components/Popup.jsx'
 import Toast from './components/Toast.jsx'
 import CartPopup from './components/CartPopup.jsx'
+import OrderHistoryPopup from './components/OrderHistoryPopup.jsx'
 import NewsletterPopup from './components/NewsletterPopup.jsx'
 import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
@@ -37,6 +38,14 @@ function App() {
     var cartPopupState = useState(false)
     var isCartOpen = cartPopupState[0]
     var setIsCartOpen = cartPopupState[1]
+
+    var ordersPopupState = useState(false)
+    var isOrdersOpen = ordersPopupState[0]
+    var setIsOrdersOpen = ordersPopupState[1]
+
+    var orderConfirmationState = useState(false)
+    var isOrderConfirmationOpen = orderConfirmationState[0]
+    var setIsOrderConfirmationOpen = orderConfirmationState[1]
 
     var toastState = useState({ isVisible: false, message: '', type: 'success' })
     var toast = toastState[0]
@@ -176,12 +185,31 @@ function App() {
         if (user) syncCartToServer(updatedCart)
     }
 
-    function handleCheckout() {
-        setIsCartOpen(false)
-        showToast('Order placed successfully! 🎉', 'success')
-        var emptyCart = []
-        setCartItems(emptyCart)
-        if (user) syncCartToServer(emptyCart)
+    async function handleCheckout() {
+        if (!user) {
+            showToast('Please login to place an order', 'error')
+            return
+        }
+        
+        if (cartItems.length === 0) {
+            showToast('Your cart is empty', 'error')
+            return
+        }
+        
+        try {
+            await AuthService.checkout(cartItems)
+            setIsCartOpen(false)
+            setIsOrderConfirmationOpen(true)
+            var emptyCart = []
+            setCartItems(emptyCart)
+            syncCartToServer(emptyCart)
+        } catch (error) {
+            showToast(error.message, 'error')
+        }
+    }
+
+    function handleOrderConfirmationClose() {
+        setIsOrderConfirmationOpen(false)
     }
 
     function showToast(message, type) {
@@ -204,8 +232,13 @@ function App() {
         setIsNewsletterOpen(false)
     }
 
-    function handleNewsletterSubscribe(email) {
-        showToast('Welcome to DairyFresh family!', 'success')
+    async function handleNewsletterSubscribe(email) {
+        try {
+            await AuthService.subscribeNewsletter(email)
+            showToast('Welcome to DairyFresh family!', 'success')
+        } catch (error) {
+            showToast(error.message, 'error')
+        }
     }
 
     function handleOpenNewsletter() {
@@ -280,6 +313,7 @@ function App() {
                 onThemeToggle={handleThemeToggle}
                 cartItemCount={getTotalCartItems()}
                 onCartClick={handleCartClick}
+                onOrdersClick={() => setIsOrdersOpen(true)}
                 user={user}
                 onLogout={handleLogout}
                 unreadNotifications={unreadNotifications}
@@ -299,6 +333,23 @@ function App() {
                 onUpdateQuantity={handleUpdateCartQuantity}
                 onCheckout={handleCheckout}
             />
+            <OrderHistoryPopup
+                isOpen={isOrdersOpen}
+                onClose={() => setIsOrdersOpen(false)}
+            />
+            <Popup isOpen={isOrderConfirmationOpen} onClose={handleOrderConfirmationClose} title="🎉 Order Placed!">
+                <div style={{ textAlign: 'center', padding: '20px 0' }}>
+                    <div style={{ fontSize: '60px', marginBottom: '15px' }}>✓</div>
+                    <h3 style={{ color: '#27ae60', marginBottom: '10px' }}>Thank you for your order!</h3>
+                    <p style={{ color: '#2ecc71', marginBottom: '20px' }}>
+                        Your order has been placed successfully. 
+                        We will send you an email confirmation shortly.
+                    </p>
+                    <button className="btn" onClick={handleOrderConfirmationClose}>
+                        Continue Shopping
+                    </button>
+                </div>
+            </Popup>
             <NewsletterPopup
                 isOpen={isNewsletterOpen}
                 onClose={handleNewsletterClose}
@@ -333,6 +384,7 @@ function App() {
                     <AdminPanel
                         isDarkMode={isDarkMode}
                         showToast={showToast}
+                        user={user}
                     />
                 } />
             </Routes>

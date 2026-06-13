@@ -16,12 +16,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.dairyfresh.service.EmailService;
+
 @RestController
 @RequestMapping("/api")
 public class AuthController {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    private EmailService emailService;
 
     @Value("${admin.email:admin@dairyfresh.com}")
     private String adminEmail;
@@ -46,6 +51,9 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
         }
     }
+
+    @Autowired
+    private com.dairyfresh.service.TwilioService twilioService;
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody Map<String, String> request) {
@@ -72,6 +80,19 @@ public class AuthController {
 
             jdbcTemplate.update("INSERT INTO users (name, email, phone, password_hash) VALUES (?, ?, ?, ?)",
                     name, email, phone, passwordHash);
+
+            emailService.sendEmail(email, "Welcome to DairyFresh!", 
+                "Hi " + name + ",\n\nWelcome to DairyFresh! We're excited to have you on board. Start shopping for fresh dairy products today!");
+
+            // Send WhatsApp Welcome Message (if phone exists)
+            if (!phone.isEmpty()) {
+                try {
+                    twilioService.sendWhatsAppMessage(phone, "Hi " + name + "! Welcome to DairyFresh 🐄\n\nThanks for signing up. Let us know if you need any help with your orders!");
+                } catch (Exception twilioEx) {
+                    System.err.println("Could not send WhatsApp welcome message: " + twilioEx.getMessage());
+                    // We catch this so it doesn't fail the registration if they haven't joined the Sandbox
+                }
+            }
 
             return ResponseEntity.ok(Map.of("status", "success", "message", "Account created successfully"));
         } catch (Exception e) {

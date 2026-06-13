@@ -46,22 +46,31 @@ function LoginPage(props) {
     var showForgotPassword = forgotPasswordState[0]
     var setShowForgotPassword = forgotPasswordState[1]
 
+    var errorPopupState = useState(false)
+    var showErrorPopup = errorPopupState[0]
+    var setShowErrorPopup = errorPopupState[1]
+    
+    var errorMessageState = useState('')
+    var errorMessage = errorMessageState[0]
+    var setErrorMessage = errorMessageState[1]
+
     var loginLogoSrc = isDarkMode ? '/images/login-logo_dark.png' : '/images/login-logo.png'
+
+    function showError(msg) {
+        setErrorMessage(msg)
+        setShowErrorPopup(true)
+    }
 
     async function handleSubmit(event) {
         event.preventDefault()
 
         if (email.trim() === '' || password.trim() === '') {
-            if (showToast) {
-                showToast('Please fill in all fields', 'error')
-            }
+            showError('Please fill in all fields')
             return
         }
 
         if (mode === 'signup' && name.trim() === '') {
-            if (showToast) {
-                showToast('Please enter your name', 'error')
-            }
+            showError('Please enter your name')
             return
         }
 
@@ -73,33 +82,43 @@ function LoginPage(props) {
                     if (showToast) showToast('Admin login successful!', 'success');
                     navigate('/admin');
                 } else {
-                    if (showToast) showToast('Login successful! Welcome back, ' + (response.name || 'User') + '!', 'success');
-                    navigate('/');
+                    setShowSuccessPopup(true);
+                    // Delay navigation so they see the popup
+                    setTimeout(() => navigate('/'), 2000);
                 }
             } catch (err) {
                 let msg = err.message;
                 if (msg === 'Invalid credentials') msg = 'Invalid email or password.';
-                if (showToast) showToast(msg, 'error');
+                showError(msg);
             }
         } else {
             try {
                 await AuthService.register(name, email, phone, password);
-                if (showToast) showToast('Account created! Please log in.', 'success');
+                setShowSuccessPopup(true);
+                // Also set it back to login mode
                 setMode('login');
                 setName('');
                 setPhone('');
             } catch (err) {
-                if (showToast) showToast(err.message, 'error');
+                showError(err.message);
             }
         }
     }
 
     function handleSuccessClose() {
         setShowSuccessPopup(false)
-        setEmail('')
-        setPassword('')
-        setName('')
-        setPhone('')
+        if (mode === 'login') {
+            navigate('/');
+        } else {
+            setEmail('')
+            setPassword('')
+            setName('')
+            setPhone('')
+        }
+    }
+
+    function handleErrorClose() {
+        setShowErrorPopup(false)
     }
 
     function handleModeToggle() {
@@ -267,10 +286,23 @@ function LoginPage(props) {
                     <p style={{ color: '#2ecc71', marginBottom: '20px' }}>
                         {mode === 'login'
                             ? 'Welcome back to DairyFresh!'
-                            : 'Welcome to the DairyFresh family!'}
+                            : 'Welcome to the DairyFresh family! Please log in.'}
                     </p>
                     <button className="btn" onClick={handleSuccessClose}>
-                        Continue Shopping
+                        {mode === 'login' ? 'Continue Shopping' : 'Login Now'}
+                    </button>
+                </div>
+            </Popup>
+
+            <Popup isOpen={showErrorPopup} onClose={handleErrorClose} title="⚠️ Error">
+                <div style={{ textAlign: 'center', padding: '20px 0' }}>
+                    <div style={{ fontSize: '60px', marginBottom: '15px' }}>✖</div>
+                    <h3 style={{ color: '#e74c3c', marginBottom: '10px' }}>Oops!</h3>
+                    <p style={{ color: '#c0392b', marginBottom: '20px' }}>
+                        {errorMessage}
+                    </p>
+                    <button className="btn" style={{ backgroundColor: '#e74c3c' }} onClick={handleErrorClose}>
+                        Try Again
                     </button>
                 </div>
             </Popup>
